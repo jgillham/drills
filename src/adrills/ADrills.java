@@ -9,12 +9,8 @@ package adrills;
  * @author domingo flores
  */
 public class ADrills {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-    }
+    public static class UnansweredQuestionException 
+            extends UnsupportedOperationException {}
     
     /**
      * Question #A.1)
@@ -27,7 +23,7 @@ public class ADrills {
      */
     public static int getElement101( int[] array, int n) {
         //TODO delete the line below and write your solution.
-        throw new UnsupportedOperationException();
+        throw new UnansweredQuestionException();
     }
     
     /**
@@ -41,7 +37,7 @@ public class ADrills {
      */
     public static int getElement102( int[] array, int n) {
         //TODO delete the line below and write your solution.
-        throw new UnsupportedOperationException();
+        throw new UnansweredQuestionException();
     }
     
     /**
@@ -55,7 +51,7 @@ public class ADrills {
      */
     public static int getElement103( int[] array, int n) {
         //TODO delete the line below and write your solution.
-        throw new UnsupportedOperationException();
+        throw new UnansweredQuestionException();
     }
     
     /**
@@ -70,7 +66,8 @@ public class ADrills {
      */
     public static int[] changeArray101( int[] array) {
         //TODO delete the line below and write your solution.
-        throw new UnsupportedOperationException();
+        throw new UnsupportedOperationException( 
+                "Please answer the question." );
     }
     
     /**
