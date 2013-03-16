@@ -87,7 +87,10 @@ public class ADrills {
      * @return the new array with the odd elements.
      */
     public static int[] changeArray102( int[] array) {
-        //TODO delete the line below and write your solution.
-        throw new UnsupportedOperationException();
+        int[] result = new int[ ( array.length + 1 ) / 2 ];
+        for( int i = 0; i < array.length; i += 2 ) {
+            result[ i / 2 ] = array[ i ];
+        }
+        return result;
     }
 }
