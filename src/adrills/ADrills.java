@@ -37,7 +37,7 @@ public class ADrills {
      * @param array is the array to look through.
      * @param n is the index of the element to grab
      * 
-     * @return the value of the nth element.
+     * @return the value of the element after nth element.
      */
     public static int getElement102( int[] array, int n) {
         //TODO delete the line below and write your solution.
@@ -51,7 +51,7 @@ public class ADrills {
      * @param array is the array to look through.
      * @param n is the index of the element to grab
      * 
-     * @return the value of the nth element.
+     * @return the value of the element before nth element.
      */
     public static int getElement103( int[] array, int n) {
         //TODO delete the line below and write your solution.
@@ -65,9 +65,8 @@ public class ADrills {
      *  return is { 7, 3 }.
      * 
      * @param array is the array to look through.
-     * @param n is the index of the element to grab
      * 
-     * @return the value of the nth element.
+     * @return the new array with the even elements.
      */
     public static int[] changeArray101( int[] array) {
         int[] result = new int[ array.length / 2 ];
