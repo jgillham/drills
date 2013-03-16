@@ -17,6 +17,7 @@ public class ADrills {
     }
     
     /**
+     * Question #A.1)
      * The method returns the nth element of the array.
      * 
      * @param array is the array to look through.
@@ -28,8 +29,10 @@ public class ADrills {
         //TODO delete the line below and write your solution.
         throw new UnsupportedOperationException();
     }
+    
     /**
-     * The method returns the element after the nth  of the array.
+     * Question #A.2)
+     * The method returns the element after the nth element of the array.
      * 
      * @param array is the array to look through.
      * @param n is the index of the element to grab
@@ -40,8 +43,10 @@ public class ADrills {
         //TODO delete the line below and write your solution.
         throw new UnsupportedOperationException();
     }
+    
     /**
-     * The method returns the element before the nth  of the array.
+     * Question #A.3)
+     * The method returns the element before the nth element of the array.
      * 
      * @param array is the array to look through.
      * @param n is the index of the element to grab
@@ -49,6 +54,22 @@ public class ADrills {
      * @return the value of the nth element.
      */
     public static int getElement103( int[] array, int n) {
+        //TODO delete the line below and write your solution.
+        throw new UnsupportedOperationException();
+    }
+    
+    /**
+     * Question #B.1)
+     * The method returns a new array with the even elements. For example, for
+     *  the array { 3, 5, 7 } the return is { 5 } and for { 6, 7, 2, 3 } the 
+     *  return is { 7, 3 }.
+     * 
+     * @param array is the array to look through.
+     * @param n is the index of the element to grab
+     * 
+     * @return the value of the nth element.
+     */
+    public static int[] changeArray101( int[] array) {
         //TODO delete the line below and write your solution.
         throw new UnsupportedOperationException();
     }
