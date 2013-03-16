@@ -126,7 +126,7 @@ public class ADrillsTest {
         {
             int[] input = { 1, 2 };
             int[] expected = { 2 };
-            int[] actual = ADrills.changeArray102( input );
+            int[] actual = ADrills.changeArray101( input );
             
             if ( expected.length != actual.length ) {
                 throw new Exception( "Test failed: array have wrong length." );
