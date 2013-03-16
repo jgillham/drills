@@ -75,4 +75,19 @@ public class ADrills {
         }
         return result;
     }
+    
+    /**
+     * Question #B.2)
+     * The method returns a new array with the odd elements. For example, for
+     *  the array { 3, 5, 7 } the return is { 3, 7 } and for { 6, 7, 2, 3 } the 
+     *  return is { 6, 3 }.
+     * 
+     * @param array is the array to look through.
+     * 
+     * @return the new array with the odd elements.
+     */
+    public static int[] changeArray102( int[] array) {
+        //TODO delete the line below and write your solution.
+        throw new UnsupportedOperationException();
+    }
 }
