@@ -25,6 +25,31 @@ public class ADrills {
      * @return the value of the nth element.
      */
     public static int getElement101( int[] array, int n) {
+        //TODO delete the line below and write your solution.
+        throw new UnsupportedOperationException();
+    }
+    /**
+     * The method returns the element after the nth  of the array.
+     * 
+     * @param array is the array to look through.
+     * @param n is the index of the element to grab
+     * 
+     * @return the value of the nth element.
+     */
+    public static int getElement102( int[] array, int n) {
+        //TODO delete the line below and write your solution.
+        throw new UnsupportedOperationException();
+    }
+    /**
+     * The method returns the element before the nth  of the array.
+     * 
+     * @param array is the array to look through.
+     * @param n is the index of the element to grab
+     * 
+     * @return the value of the nth element.
+     */
+    public static int getElement103( int[] array, int n) {
+        //TODO delete the line below and write your solution.
         throw new UnsupportedOperationException();
     }
 }
