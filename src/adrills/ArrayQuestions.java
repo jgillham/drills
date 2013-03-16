@@ -8,7 +8,7 @@ package adrills;
  *
  * @author domingo flores
  */
-public class ArrayQuestions {
+public class ArrayQuestions extends Questions {
     public static class UnansweredQuestionException 
             extends UnsupportedOperationException {}
     
