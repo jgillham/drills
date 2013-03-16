@@ -9,23 +9,36 @@ package adrills;
  * @author jgillham
  */
 public class GradeArrayQuestions {
+    static public int possiblePoints = 0;
     static public void main( String[] args ) {
+        int score = grade();
+        System.out.printf( "You got %d out of %d.\n", score, possiblePoints );
+    }
+    static public int grade() {
+        int result = 0;
+        possiblePoints = 0;
         try {
+            ++possiblePoints;
             test_getElement101();
+            ++result;
             System.out.println( "test_getElement101 successful!" );
         }
         catch ( Exception e ) {
             e.printStackTrace();
         }
         try {
+            ++possiblePoints;
             test_getElement102();
+            ++result;
             System.out.println( "test_getElement102 successful!" );
         }
         catch ( Exception e ) {
             e.printStackTrace();
         }
         try {
+            ++possiblePoints;
             test_getElement103();
+            ++result;
             System.out.println( "test_getElement103 successful!" );
         }
         catch ( Exception e ) {
@@ -33,26 +46,24 @@ public class GradeArrayQuestions {
         }
         
         try {
+            ++possiblePoints;
             test_changeArray101();
+            ++result;
             System.out.println( "test_changeArray101 successful!" );
         }
         catch ( Exception e ) {
             e.printStackTrace();
         }
         try {
+            ++possiblePoints;
             test_changeArray102();
+            ++result;
             System.out.println( "test_changeArray102 successful!" );
         }
         catch ( Exception e ) {
             e.printStackTrace();
         }
-        try {
-            test_changeArray102();
-            System.out.println( "test_getElement103 successful!" );
-        }
-        catch ( Exception e ) {
-            e.printStackTrace();
-        }
+        return result;
     }
         
     static public void test_getElement101() throws Exception {
