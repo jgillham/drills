@@ -34,14 +34,14 @@ public class ADrillsTest {
         
         try {
             test_changeArray101();
-            System.out.println( "test_getElement103 successful!" );
+            System.out.println( "test_changeArray101 successful!" );
         }
         catch ( Exception e ) {
             e.printStackTrace();
         }
         try {
             test_changeArray102();
-            System.out.println( "test_getElement103 successful!" );
+            System.out.println( "test_changeArray102 successful!" );
         }
         catch ( Exception e ) {
             e.printStackTrace();
