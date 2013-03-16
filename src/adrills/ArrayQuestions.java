@@ -22,8 +22,7 @@ public class ArrayQuestions extends Questions {
      * @return the value of the nth element.
      */
     public static int getElement101( int[] array, int n) {
-        //TODO delete the line below and write your solution.
-        throw new UnansweredQuestionException();
+        return array[n];
     }
     
     /**
@@ -36,8 +35,7 @@ public class ArrayQuestions extends Questions {
      * @return the value of the element after nth element.
      */
     public static int getElement102( int[] array, int n) {
-        //TODO delete the line below and write your solution.
-        throw new UnansweredQuestionException();
+        return array[n + 1];
     }
     
     /**
@@ -50,8 +48,7 @@ public class ArrayQuestions extends Questions {
      * @return the value of the element before nth element.
      */
     public static int getElement103( int[] array, int n) {
-        //TODO delete the line below and write your solution.
-        throw new UnansweredQuestionException();
+        return array[n - 1];
     }
     
     /**
