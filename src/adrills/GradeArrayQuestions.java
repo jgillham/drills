@@ -8,7 +8,7 @@ package adrills;
  *
  * @author jgillham
  */
-public class ADrillsTest {
+public class GradeArrayQuestions {
     static public void main( String[] args ) {
         try {
             test_getElement101();
@@ -50,23 +50,23 @@ public class ADrillsTest {
         
     static public void test_getElement101() throws Exception {
         int[] input = { 1, 6, 13, 8, 20 };
-        if( 1 != ADrills.getElement101( input, 0 ) )
+        if( 1 != ArrayQuestions.getElement101( input, 0 ) )
             throw new Exception( "Test failed." );
-        if( 6 != ADrills.getElement101( input, 1 ) )
+        if( 6 != ArrayQuestions.getElement101( input, 1 ) )
             throw new Exception( "Test failed." );
-        if( 13 != ADrills.getElement101( input, 2 ) )
+        if( 13 != ArrayQuestions.getElement101( input, 2 ) )
             throw new Exception( "Test failed." );
-        if( 20 != ADrills.getElement101( input, 4 ) )
+        if( 20 != ArrayQuestions.getElement101( input, 4 ) )
             throw new Exception( "Test failed." );
         try {
-            ADrills.getElement102( input, -1 );
+            ArrayQuestions.getElement102( input, -1 );
             throw new Exception( "Test failed: Should throw an exception." );
         }
         catch( Exception e ) {
             // Success.
         }
         try {
-            ADrills.getElement102( input, 5 );
+            ArrayQuestions.getElement102( input, 5 );
             throw new Exception( "Test failed: Should throw an exception." );
         }
         catch( Exception e ) {
@@ -75,18 +75,18 @@ public class ADrillsTest {
     }
     static public void test_getElement102() throws Exception {
         int[] input = { 1, 6, 13, 8, 20 };
-        if( 1 != ADrills.getElement102( input, -1 ) )
+        if( 1 != ArrayQuestions.getElement102( input, -1 ) )
             throw new Exception( "Test failed." );
-        if( 6 != ADrills.getElement102( input, 0 ) )
+        if( 6 != ArrayQuestions.getElement102( input, 0 ) )
             throw new Exception( "Test failed." );
-        if( 13 != ADrills.getElement102( input, 1 ) )
+        if( 13 != ArrayQuestions.getElement102( input, 1 ) )
             throw new Exception( "Test failed." );
-        if( 8 != ADrills.getElement102( input, 2 ) )
+        if( 8 != ArrayQuestions.getElement102( input, 2 ) )
             throw new Exception( "Test failed." );
-        if( 20 != ADrills.getElement102( input, 3 ) )
+        if( 20 != ArrayQuestions.getElement102( input, 3 ) )
             throw new Exception( "Test failed." );
         try {
-            ADrills.getElement102( input, 4 );
+            ArrayQuestions.getElement102( input, 4 );
             throw new Exception( "Test failed: Should throw an exception." );
         }
         catch( Exception e ) {
@@ -96,25 +96,25 @@ public class ADrillsTest {
     static public void test_getElement103() throws Exception {
         int[] input = { 1, 6, 13, 8, 20 };
         
-        if( 1 != ADrills.getElement103( input, 1 ) )
+        if( 1 != ArrayQuestions.getElement103( input, 1 ) )
             throw new Exception( "Test failed." );
-        if( 6 != ADrills.getElement103( input, 2 ) )
+        if( 6 != ArrayQuestions.getElement103( input, 2 ) )
             throw new Exception( "Test failed." );
-        if( 13 != ADrills.getElement103( input, 3 ) )
+        if( 13 != ArrayQuestions.getElement103( input, 3 ) )
             throw new Exception( "Test failed." );
-        if( 8 != ADrills.getElement103( input, 4 ) )
+        if( 8 != ArrayQuestions.getElement103( input, 4 ) )
             throw new Exception( "Test failed." );
-        if( 20 != ADrills.getElement103( input, 5 ) )
+        if( 20 != ArrayQuestions.getElement103( input, 5 ) )
             throw new Exception( "Test failed." );
         try {
-            ADrills.getElement103( input, -1 );
+            ArrayQuestions.getElement103( input, -1 );
             throw new Exception( "Test failed: Should throw an exception." );
         }
         catch( Exception e ) {
             // Success.
         }
         try {
-            ADrills.getElement103( input, 6 );
+            ArrayQuestions.getElement103( input, 6 );
             throw new Exception( "Test failed: Should throw an exception." );
         }
         catch( Exception e ) {
@@ -126,7 +126,7 @@ public class ADrillsTest {
         {
             int[] input = { 1, 2 };
             int[] expected = { 2 };
-            int[] actual = ADrills.changeArray101( input );
+            int[] actual = ArrayQuestions.changeArray101( input );
             
             if ( expected.length != actual.length ) {
                 throw new Exception( "Test failed: array have wrong length." );
@@ -142,7 +142,7 @@ public class ADrillsTest {
         {
             int[] input = { 1, 6, 13, 8, 20 };
             int[] expected = { 6, 8 };
-            int[] actual = ADrills.changeArray101( input );
+            int[] actual = ArrayQuestions.changeArray101( input );
             
             if ( expected.length != actual.length ) {
                 throw new Exception( "Test failed: array have wrong length." );
@@ -160,7 +160,7 @@ public class ADrillsTest {
         {
             int[] input = { 1 };
             int[] expected = { 1 };
-            int[] actual = ADrills.changeArray102( input );
+            int[] actual = ArrayQuestions.changeArray102( input );
             
             if ( expected.length != actual.length ) {
                 throw new Exception( "Test failed: array have wrong length." );
@@ -176,7 +176,7 @@ public class ADrillsTest {
         {
             int[] input = { 1, 2 };
             int[] expected = { 1 };
-            int[] actual = ADrills.changeArray102( input );
+            int[] actual = ArrayQuestions.changeArray102( input );
             
             if ( expected.length != actual.length ) {
                 throw new Exception( "Test failed: array have wrong length." );
@@ -192,7 +192,7 @@ public class ADrillsTest {
         {
             int[] input = { 1, 6, 13, 8, 20 };
             int[] expected = { 1, 13, 20 };
-            int[] actual = ADrills.changeArray102( input );
+            int[] actual = ArrayQuestions.changeArray102( input );
             
             if ( expected.length != actual.length ) {
                 throw new Exception( "Test failed: array have wrong length." );
