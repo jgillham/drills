@@ -31,6 +31,14 @@ public class ADrillsTest {
         catch ( Exception e ) {
             e.printStackTrace();
         }
+        
+        try {
+            test_changeArray101();
+            System.out.println( "test_getElement103 successful!" );
+        }
+        catch ( Exception e ) {
+            e.printStackTrace();
+        }
     }
         
     static public void test_getElement101() throws Exception {
@@ -104,6 +112,25 @@ public class ADrillsTest {
         }
         catch( Exception e ) {
             // Success.
+        }
+    }
+    
+    static public void test_changeArray101() throws Exception {
+        {
+            int[] input = { 1, 6, 13, 8, 20 };
+            int[] expected = { 6, 8 };
+            int[] actual = ADrills.changeArray101( input );
+            
+            if ( expected.length != actual.length ) {
+                throw new Exception( "Test failed: array have wrong length." );
+            }
+            for ( int i = 0; i < actual.length; ++i ) {
+                if ( expected[i] != actual[i] ) {
+                    throw new Exception( "Test failed: the " + i + 
+                            " element should be " + actual[i] + " but was " + 
+                                    expected[i] + "." );
+                }
+            }
         }
     }
 }
