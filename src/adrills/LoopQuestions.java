@@ -24,7 +24,8 @@ public class LoopQuestions extends Questions {
      * @param n is the highest number.
      */
     public static void outputCount101( int n) {
-        //TODO delete the line below and write your solution.
-        throw new UnansweredQuestionException();
+        for ( int i = 1; i <= n; ++i ) {
+            System.out.println( i );
+        }
     }
 }
