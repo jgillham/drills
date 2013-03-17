@@ -59,6 +59,15 @@ public class GradeArrayQuestions {
         catch ( Exception e ) {
             e.printStackTrace();
         }
+        try {
+            ++possiblePoints;
+            test_combineArrays();
+            ++result;
+            System.out.println( "test_combineArrays successful!" );
+        }
+        catch ( Exception e ) {
+            e.printStackTrace();
+        }
         return result;
     }
         
@@ -219,5 +228,41 @@ public class GradeArrayQuestions {
                 }
             }
         }        
+    }
+    static public void test_combineArrays() throws Exception {
+        {
+            int[] input1 = { 5, 6, 13 },
+                  input2 = { 7, 8, 20 },
+                  expected = { 5, 6, 13, 7, 8, 20 },
+                  actual = CS1.ArrayQuestions.combineArrays( input1, input2 );
+        
+            if ( expected.length != actual.length ) {
+                throw new Exception( "Test failed: array have wrong length." );
+            }
+            for ( int i = 0; i < actual.length; ++i ) {
+                if ( expected[i] != actual[i] ) {
+                    throw new Exception( "Test failed: the " + i + 
+                            " element should be " + expected[i] + " but was " + 
+                                    actual[i] + "." );
+                }
+            }
+        }
+        {
+            int[] input1 = { 5 },
+                  input2 = { 7, 8, 20 },
+                  expected = { 5, 7, 8, 20 },
+                  actual = CS1.ArrayQuestions.combineArrays( input1, input2 );
+        
+            if ( expected.length != actual.length ) {
+                throw new Exception( "Test failed: array have wrong length." );
+            }
+            for ( int i = 0; i < actual.length; ++i ) {
+                if ( expected[i] != actual[i] ) {
+                    throw new Exception( "Test failed: the " + i + 
+                            " element should be " + expected[i] + " but was " + 
+                                    actual[i] + "." );
+                }
+            }
+        }
     }
 }
