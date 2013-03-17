@@ -1,8 +1,10 @@
+
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package adrills;
+
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -39,7 +41,7 @@ public class GradeLoopQuestions {
                 ByteArrayOutputStream result = new ByteArrayOutputStream();
                 System.setOut( new PrintStream( result ) );
                 
-                LoopQuestions.outputCount101( 1 );
+                CS1.LoopQuestions.outputCount101( 1 );
                 String actual = result.toString("UTF8");
 
                 if ( !actual.equals( "1\r\n" ) &&
@@ -52,7 +54,7 @@ public class GradeLoopQuestions {
                 ByteArrayOutputStream result = new ByteArrayOutputStream();
                 System.setOut( new PrintStream( result ) );
                 
-                LoopQuestions.outputCount101( 5 );
+                CS1.LoopQuestions.outputCount101( 5 );
                 String actual = result.toString("UTF8");
 
                 if ( !actual.equals( "1\r\n2\r\n3\r\n4\r\n5\r\n" ) &&
@@ -65,7 +67,7 @@ public class GradeLoopQuestions {
                 ByteArrayOutputStream result = new ByteArrayOutputStream();
                 System.setOut( new PrintStream( result ) );
                 
-                LoopQuestions.outputCount101( 7 );
+                CS1.LoopQuestions.outputCount101( 7 );
                 String actual = result.toString("UTF8");
 
                 if ( !actual.equals( "1\r\n2\r\n3\r\n4\r\n5\r\n6\r\n7\r\n" ) &&

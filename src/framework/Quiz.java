@@ -1,14 +1,18 @@
+package framework;
+
+
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package adrills;
+
 
 /**
  *
  * @author jgillham
  */
-abstract public class Questions {
+abstract public class Quiz {
     public static class UnansweredQuestionException 
             extends UnsupportedOperationException {}
     

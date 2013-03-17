@@ -1,8 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package adrills;
+
 
 /**
  *
@@ -68,23 +64,23 @@ public class GradeArrayQuestions {
         
     static public void test_getElement101() throws Exception {
         int[] input = { 1, 6, 13, 8, 20 };
-        if( 1 != ArrayQuestions.getElement101( input, 0 ) )
+        if( 1 != CS1.ArrayQuestions.getElement101( input, 0 ) )
             throw new Exception( "Test failed." );
-        if( 6 != ArrayQuestions.getElement101( input, 1 ) )
+        if( 6 != CS1.ArrayQuestions.getElement101( input, 1 ) )
             throw new Exception( "Test failed." );
-        if( 13 != ArrayQuestions.getElement101( input, 2 ) )
+        if( 13 != CS1.ArrayQuestions.getElement101( input, 2 ) )
             throw new Exception( "Test failed." );
-        if( 20 != ArrayQuestions.getElement101( input, 4 ) )
+        if( 20 != CS1.ArrayQuestions.getElement101( input, 4 ) )
             throw new Exception( "Test failed." );
         try {
-            ArrayQuestions.getElement102( input, -1 );
+            CS1.ArrayQuestions.getElement102( input, -1 );
             throw new Exception( "Test failed: Should throw an exception." );
         }
         catch( Exception e ) {
             // Success.
         }
         try {
-            ArrayQuestions.getElement102( input, 5 );
+            CS1.ArrayQuestions.getElement102( input, 5 );
             throw new Exception( "Test failed: Should throw an exception." );
         }
         catch( Exception e ) {
@@ -93,18 +89,18 @@ public class GradeArrayQuestions {
     }
     static public void test_getElement102() throws Exception {
         int[] input = { 1, 6, 13, 8, 20 };
-        if( 1 != ArrayQuestions.getElement102( input, -1 ) )
+        if( 1 != CS1.ArrayQuestions.getElement102( input, -1 ) )
             throw new Exception( "Test failed." );
-        if( 6 != ArrayQuestions.getElement102( input, 0 ) )
+        if( 6 != CS1.ArrayQuestions.getElement102( input, 0 ) )
             throw new Exception( "Test failed." );
-        if( 13 != ArrayQuestions.getElement102( input, 1 ) )
+        if( 13 != CS1.ArrayQuestions.getElement102( input, 1 ) )
             throw new Exception( "Test failed." );
-        if( 8 != ArrayQuestions.getElement102( input, 2 ) )
+        if( 8 != CS1.ArrayQuestions.getElement102( input, 2 ) )
             throw new Exception( "Test failed." );
-        if( 20 != ArrayQuestions.getElement102( input, 3 ) )
+        if( 20 != CS1.ArrayQuestions.getElement102( input, 3 ) )
             throw new Exception( "Test failed." );
         try {
-            ArrayQuestions.getElement102( input, 4 );
+            CS1.ArrayQuestions.getElement102( input, 4 );
             throw new Exception( "Test failed: Should throw an exception." );
         }
         catch( Exception e ) {
@@ -114,25 +110,25 @@ public class GradeArrayQuestions {
     static public void test_getElement103() throws Exception {
         int[] input = { 1, 6, 13, 8, 20 };
         
-        if( 1 != ArrayQuestions.getElement103( input, 1 ) )
+        if( 1 != CS1.ArrayQuestions.getElement103( input, 1 ) )
             throw new Exception( "Test failed." );
-        if( 6 != ArrayQuestions.getElement103( input, 2 ) )
+        if( 6 != CS1.ArrayQuestions.getElement103( input, 2 ) )
             throw new Exception( "Test failed." );
-        if( 13 != ArrayQuestions.getElement103( input, 3 ) )
+        if( 13 != CS1.ArrayQuestions.getElement103( input, 3 ) )
             throw new Exception( "Test failed." );
-        if( 8 != ArrayQuestions.getElement103( input, 4 ) )
+        if( 8 != CS1.ArrayQuestions.getElement103( input, 4 ) )
             throw new Exception( "Test failed." );
-        if( 20 != ArrayQuestions.getElement103( input, 5 ) )
+        if( 20 != CS1.ArrayQuestions.getElement103( input, 5 ) )
             throw new Exception( "Test failed." );
         try {
-            ArrayQuestions.getElement103( input, -1 );
+            CS1.ArrayQuestions.getElement103( input, -1 );
             throw new Exception( "Test failed: Should throw an exception." );
         }
         catch( Exception e ) {
             // Success.
         }
         try {
-            ArrayQuestions.getElement103( input, 6 );
+            CS1.ArrayQuestions.getElement103( input, 6 );
             throw new Exception( "Test failed: Should throw an exception." );
         }
         catch( Exception e ) {
@@ -144,7 +140,7 @@ public class GradeArrayQuestions {
         {
             int[] input = { 1, 2 };
             int[] expected = { 2 };
-            int[] actual = ArrayQuestions.changeArray101( input );
+            int[] actual = CS1.ArrayQuestions.changeArray101( input );
             
             if ( expected.length != actual.length ) {
                 throw new Exception( "Test failed: array have wrong length." );
@@ -160,7 +156,7 @@ public class GradeArrayQuestions {
         {
             int[] input = { 1, 6, 13, 8, 20 };
             int[] expected = { 6, 8 };
-            int[] actual = ArrayQuestions.changeArray101( input );
+            int[] actual = CS1.ArrayQuestions.changeArray101( input );
             
             if ( expected.length != actual.length ) {
                 throw new Exception( "Test failed: array have wrong length." );
@@ -178,7 +174,7 @@ public class GradeArrayQuestions {
         {
             int[] input = { 1 };
             int[] expected = { 1 };
-            int[] actual = ArrayQuestions.changeArray102( input );
+            int[] actual = CS1.ArrayQuestions.changeArray102( input );
             
             if ( expected.length != actual.length ) {
                 throw new Exception( "Test failed: array have wrong length." );
@@ -194,7 +190,7 @@ public class GradeArrayQuestions {
         {
             int[] input = { 1, 2 };
             int[] expected = { 1 };
-            int[] actual = ArrayQuestions.changeArray102( input );
+            int[] actual = CS1.ArrayQuestions.changeArray102( input );
             
             if ( expected.length != actual.length ) {
                 throw new Exception( "Test failed: array have wrong length." );
@@ -210,7 +206,7 @@ public class GradeArrayQuestions {
         {
             int[] input = { 1, 6, 13, 8, 20 };
             int[] expected = { 1, 13, 20 };
-            int[] actual = ArrayQuestions.changeArray102( input );
+            int[] actual = CS1.ArrayQuestions.changeArray102( input );
             
             if ( expected.length != actual.length ) {
                 throw new Exception( "Test failed: array have wrong length." );

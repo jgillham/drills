@@ -1,14 +1,16 @@
+package CS1;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package adrills;
+
 
 /**
  *
  * @author jgillham
  */
-public class LoopQuestions extends Questions {
+public class LoopQuestions extends framework.Quiz {
     /**
      * Question #A.1)
      * The method uses a loop (recommend a for loop) to print numbers 1 to n to
