@@ -58,9 +58,9 @@ public class ArrayQuestions extends framework.Quiz {
     
     /**
      * Question #B.1)
-     * The method returns a new array with the even elements. For example, for
-     *  the array { 3, 5, 7 } the return is { 5 } and for { 6, 7, 2, 3 } the 
-     *  return is { 7, 3 }.
+     * The method returns a new array with every other element starting with the
+     *  2nd element. For example, for the array { 3, 5, 7 } the return is { 5 }
+     *  and for { 6, 7, 2, 3 } the return is { 7, 3 }.
      * 
      * @param array is the array to look through.
      * 
@@ -74,9 +74,9 @@ public class ArrayQuestions extends framework.Quiz {
     
     /**
      * Question #B.2)
-     * The method returns a new array with the odd elements. For example, for
-     *  the array { 3, 5, 7 } the return is { 3, 7 } and for { 6, 7, 2, 3 } the 
-     *  return is { 6, 3 }.
+     * The method returns a new array with every other element starting with the
+     *  1st element. For example, for the array { 3, 5, 7 } the return is 
+     *  { 3, 7 } and for { 6, 7, 2, 3 } the return is { 6, 3 }.
      * 
      * @param array is the array to look through.
      * 
