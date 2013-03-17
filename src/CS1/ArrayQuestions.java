@@ -1,14 +1,16 @@
+package CS1;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package adrills;
+
 
 /**
  *
  * @author domingo flores
  */
-public class ArrayQuestions extends Questions {
+public class ArrayQuestions extends framework.Quiz {
     public static class UnansweredQuestionException 
             extends UnsupportedOperationException {}
     
