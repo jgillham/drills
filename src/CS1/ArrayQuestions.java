@@ -11,8 +11,6 @@ package CS1;
  * @author domingo flores
  */
 public class ArrayQuestions extends framework.Quiz {
-    public static class UnansweredQuestionException 
-            extends UnsupportedOperationException {}
     
     /**
      * Question #A.1)
@@ -68,8 +66,7 @@ public class ArrayQuestions extends framework.Quiz {
      */
     public static int[] changeArray101( int[] array) {
         //TODO delete the line below and write your solution.
-        throw new UnsupportedOperationException( 
-                "Please answer the question." );
+        throw new UnansweredQuestionException();
     }
     
     /**
@@ -84,7 +81,7 @@ public class ArrayQuestions extends framework.Quiz {
      */
     public static int[] changeArray102( int[] array) {
         //TODO delete the line below and write your solution.
-        throw new UnsupportedOperationException();
+        throw new UnansweredQuestionException();
     }
     
     /**
@@ -99,7 +96,7 @@ public class ArrayQuestions extends framework.Quiz {
      */
     public static int[] combineArrays( int[] array1, int[] array2 ) {
         //TODO delete the line below and write your solution.
-        throw new UnsupportedOperationException();
+        throw new UnansweredQuestionException();
     }
     
     /**
@@ -112,7 +109,7 @@ public class ArrayQuestions extends framework.Quiz {
      */
     public static void incrementArray( int[] array, int n ) {
         //TODO delete the line below and write your solution.
-        throw new UnsupportedOperationException();
+        throw new UnansweredQuestionException();
     }
     
     /**
@@ -126,7 +123,7 @@ public class ArrayQuestions extends framework.Quiz {
      */
     public static int sumArray( int[] array ) {
         //TODO delete the line below and write your solution.
-        throw new UnsupportedOperationException();
+        throw new UnansweredQuestionException();
     }
     
     /**
@@ -140,7 +137,7 @@ public class ArrayQuestions extends framework.Quiz {
      */
     public static int getArrayMax( int[] array ) {
         //TODO delete the line below and write your solution.
-        throw new UnsupportedOperationException();
+        throw new UnansweredQuestionException();
     }
     
     /**
@@ -154,6 +151,6 @@ public class ArrayQuestions extends framework.Quiz {
      */
     public static int getArrayMin( int[] array ) {
         //TODO delete the line below and write your solution.
-        throw new UnsupportedOperationException();
+        throw new UnansweredQuestionException();
     }
 }
