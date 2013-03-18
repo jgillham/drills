@@ -1,4 +1,4 @@
-
+import java.util.Arrays;
 
 /**
  *
@@ -73,6 +73,24 @@ public class GradeArrayQuestions {
             test_incrementArrays();
             ++result;
             System.out.println( "test_combineArrays successful!" );
+        }
+        catch ( Exception e ) {
+            e.printStackTrace();
+        }
+        try {
+            ++possiblePoints;
+            test_getArrayMax();
+            ++result;
+            System.out.println( "test_getArrayMax successful!" );
+        }
+        catch ( Exception e ) {
+            e.printStackTrace();
+        }
+        try {
+            ++possiblePoints;
+            test_getArrayMin();
+            ++result;
+            System.out.println( "test_getArrayMin successful!" );
         }
         catch ( Exception e ) {
             e.printStackTrace();
@@ -301,6 +319,62 @@ public class GradeArrayQuestions {
                             " element should be " + expected[i] + " but was " + 
                                     actual[i] + "." );
                 }
+            }
+        }
+    }
+    static public void test_getArrayMax() throws Exception {
+        {
+            int[] input1 = { 5 };
+            int expected = 5,
+                actual = CS1.ArrayQuestions.getArrayMax( input1 );
+        
+            if ( expected != actual ) {
+                throw new Exception( String.format(
+                    "Test failed: for the array %s the result should be %d but"
+                    +
+                    " was %d.", 
+                    Arrays.toString( input1 ), expected, actual ) );
+            }
+        }
+        {
+            int[] input1 = { 5, 7, 3, 10, 2, 1 };
+            int expected = 10,
+                actual = CS1.ArrayQuestions.getArrayMax( input1 );
+        
+            if ( expected != actual ) {
+                throw new Exception( String.format(
+                    "Test failed: for the array %s the result should be %d but"
+                    +
+                    " was %d.", 
+                    Arrays.toString( input1 ), expected, actual ) );
+            }
+        }
+    }
+    static public void test_getArrayMin() throws Exception {
+        {
+            int[] input1 = { 5 };
+            int expected = 5,
+                actual = CS1.ArrayQuestions.getArrayMin( input1 );
+        
+            if ( expected != actual ) {
+                throw new Exception( String.format(
+                    "Test failed: for the array %s the result should be %d but"
+                    +
+                    " was %d.", 
+                    Arrays.toString( input1 ), expected, actual ) );
+            }
+        }
+        {
+            int[] input1 = { 5, 7, 2, 10, 3, 4 };
+            int expected = 2,
+                actual = CS1.ArrayQuestions.getArrayMin( input1 );
+        
+            if ( expected != actual ) {
+                throw new Exception( String.format(
+                    "Test failed: for the array %s the result should be %d but"
+                    +
+                    " was %d.", 
+                    Arrays.toString( input1 ), expected, actual ) );
             }
         }
     }
