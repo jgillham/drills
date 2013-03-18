@@ -386,6 +386,19 @@ public class GradeArrayQuestions {
                     Arrays.toString( input1 ), expected, actual ) );
             }
         }
+        {
+            int[] input1 = { Integer.MIN_VALUE };
+            int expected = Integer.MIN_VALUE,
+                actual = CS1.ArrayQuestions.getArrayMax( input1 );
+        
+            if ( expected != actual ) {
+                throw new Exception( String.format(
+                    "Test failed: for the array %s the result should be %d but"
+                    +
+                    " was %d.", 
+                    Arrays.toString( input1 ), expected, actual ) );
+            }
+        }
     }
     static public void test_getArrayMin() throws Exception {
         {
@@ -404,6 +417,19 @@ public class GradeArrayQuestions {
         {
             int[] input1 = { 5, 7, 2, 10, 3, 4 };
             int expected = 2,
+                actual = CS1.ArrayQuestions.getArrayMin( input1 );
+        
+            if ( expected != actual ) {
+                throw new Exception( String.format(
+                    "Test failed: for the array %s the result should be %d but"
+                    +
+                    " was %d.", 
+                    Arrays.toString( input1 ), expected, actual ) );
+            }
+        }
+        {
+            int[] input1 = { Integer.MAX_VALUE };
+            int expected = Integer.MAX_VALUE,
                 actual = CS1.ArrayQuestions.getArrayMin( input1 );
         
             if ( expected != actual ) {
