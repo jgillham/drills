@@ -1,11 +1,13 @@
 import java.util.Arrays;
+import framework.Grader;
+import framework.Grader.IncorrectAnswer;
 
 /**
  *
- * @author jgillham
+ * @author Josh Gillham
+ * @version 3-18-13
  */
-public class GradeArrayQuestions {
-    static public int possiblePoints = 0;
+public class GradeArrayQuestions extends Grader {
     static public void main( String[] args ) {
         int score = grade();
         System.out.printf( "You got %d out of %d.\n", score, possiblePoints );
@@ -19,7 +21,7 @@ public class GradeArrayQuestions {
             ++result;
             System.out.println( "test_getElement101 successful!" );
         }
-        catch ( Exception e ) {
+        catch (Exception e) {
             e.printStackTrace();
         }
         try {
@@ -28,7 +30,7 @@ public class GradeArrayQuestions {
             ++result;
             System.out.println( "test_getElement102 successful!" );
         }
-        catch ( Exception e ) {
+        catch (Exception e) {
             e.printStackTrace();
         }
         try {
@@ -37,7 +39,7 @@ public class GradeArrayQuestions {
             ++result;
             System.out.println( "test_getElement103 successful!" );
         }
-        catch ( Exception e ) {
+        catch (Exception e) {
             e.printStackTrace();
         }
         
@@ -47,7 +49,7 @@ public class GradeArrayQuestions {
             ++result;
             System.out.println( "test_changeArray101 successful!" );
         }
-        catch ( Exception e ) {
+        catch (Exception e) {
             e.printStackTrace();
         }
         try {
@@ -56,7 +58,7 @@ public class GradeArrayQuestions {
             ++result;
             System.out.println( "test_changeArray102 successful!" );
         }
-        catch ( Exception e ) {
+        catch (Exception e) {
             e.printStackTrace();
         }
         try {
@@ -65,7 +67,7 @@ public class GradeArrayQuestions {
             ++result;
             System.out.println( "test_combineArrays successful!" );
         }
-        catch ( Exception e ) {
+        catch (Exception e) {
             e.printStackTrace();
         }
         try {
@@ -74,7 +76,7 @@ public class GradeArrayQuestions {
             ++result;
             System.out.println( "test_combineArrays successful!" );
         }
-        catch ( Exception e ) {
+        catch (Exception e) {
             e.printStackTrace();
         }
         try {
@@ -83,7 +85,7 @@ public class GradeArrayQuestions {
             ++result;
             System.out.println( "test_sumArray successful!" );
         }
-        catch ( Exception e ) {
+        catch (Exception e) {
             e.printStackTrace();
         }
         try {
@@ -92,7 +94,7 @@ public class GradeArrayQuestions {
             ++result;
             System.out.println( "test_getArrayMax successful!" );
         }
-        catch ( Exception e ) {
+        catch (Exception e) {
             e.printStackTrace();
         }
         try {
@@ -101,98 +103,104 @@ public class GradeArrayQuestions {
             ++result;
             System.out.println( "test_getArrayMin successful!" );
         }
-        catch ( Exception e ) {
+        catch (Exception e) {
             e.printStackTrace();
         }
         return result;
     }
         
-    static public void test_getElement101() throws Exception {
+    static public void test_getElement101() throws IncorrectAnswer {
         int[] input = { 1, 6, 13, 8, 20 };
         if( 1 != CS1.ArrayQuestions.getElement101( input, 0 ) )
-            throw new Exception( "Test failed." );
+            throw new IncorrectAnswer( "Test failed." );
         if( 6 != CS1.ArrayQuestions.getElement101( input, 1 ) )
-            throw new Exception( "Test failed." );
+            throw new IncorrectAnswer( "Test failed." );
         if( 13 != CS1.ArrayQuestions.getElement101( input, 2 ) )
-            throw new Exception( "Test failed." );
+            throw new IncorrectAnswer( "Test failed." );
         if( 20 != CS1.ArrayQuestions.getElement101( input, 4 ) )
-            throw new Exception( "Test failed." );
+            throw new IncorrectAnswer( "Test failed." );
         try {
-            CS1.ArrayQuestions.getElement102( input, -1 );
-            throw new Exception( "Test failed: Should throw an exception." );
+            CS1.ArrayQuestions.getElement101(input, -1);
+            throw new IncorrectAnswer( "Test failed: Should throw an exception." );
         }
-        catch( Exception e ) {
+        catch (ArrayIndexOutOfBoundsException e) {
             // Success.
         }
         try {
-            CS1.ArrayQuestions.getElement102( input, 5 );
-            throw new Exception( "Test failed: Should throw an exception." );
+            CS1.ArrayQuestions.getElement101(input, 5);
+            throw new IncorrectAnswer( "Test failed: Should throw an exception." );
         }
-        catch( Exception e ) {
+        catch (ArrayIndexOutOfBoundsException e) {
             // Success.
         }
     }
-    static public void test_getElement102() throws Exception {
+    static public void test_getElement102() throws IncorrectAnswer {
         int[] input = { 1, 6, 13, 8, 20 };
         if( 1 != CS1.ArrayQuestions.getElement102( input, -1 ) )
-            throw new Exception( "Test failed." );
+            throw new IncorrectAnswer( "Test failed." );
         if( 6 != CS1.ArrayQuestions.getElement102( input, 0 ) )
-            throw new Exception( "Test failed." );
+            throw new IncorrectAnswer( "Test failed." );
         if( 13 != CS1.ArrayQuestions.getElement102( input, 1 ) )
-            throw new Exception( "Test failed." );
+            throw new IncorrectAnswer( "Test failed." );
         if( 8 != CS1.ArrayQuestions.getElement102( input, 2 ) )
-            throw new Exception( "Test failed." );
+            throw new IncorrectAnswer( "Test failed." );
         if( 20 != CS1.ArrayQuestions.getElement102( input, 3 ) )
-            throw new Exception( "Test failed." );
+            throw new IncorrectAnswer("Test failed.");
+        try {
+            CS1.ArrayQuestions.getElement102(input, -2);
+            throw new IncorrectAnswer("Test failed: Should throw an exception.");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            // Success.
+        }
         try {
             CS1.ArrayQuestions.getElement102( input, 4 );
-            throw new Exception( "Test failed: Should throw an exception." );
+            throw new IncorrectAnswer( "Test failed: Should throw an exception." );
         }
-        catch( Exception e ) {
+ catch (ArrayIndexOutOfBoundsException e) {
             // Success.
         }
     }
-    static public void test_getElement103() throws Exception {
+    static public void test_getElement103() throws IncorrectAnswer {
         int[] input = { 1, 6, 13, 8, 20 };
         
         if( 1 != CS1.ArrayQuestions.getElement103( input, 1 ) )
-            throw new Exception( "Test failed." );
+            throw new IncorrectAnswer( "Test failed." );
         if( 6 != CS1.ArrayQuestions.getElement103( input, 2 ) )
-            throw new Exception( "Test failed." );
+            throw new IncorrectAnswer( "Test failed." );
         if( 13 != CS1.ArrayQuestions.getElement103( input, 3 ) )
-            throw new Exception( "Test failed." );
+            throw new IncorrectAnswer( "Test failed." );
         if( 8 != CS1.ArrayQuestions.getElement103( input, 4 ) )
-            throw new Exception( "Test failed." );
+            throw new IncorrectAnswer( "Test failed." );
         if( 20 != CS1.ArrayQuestions.getElement103( input, 5 ) )
-            throw new Exception( "Test failed." );
+            throw new IncorrectAnswer( "Test failed." );
         try {
             CS1.ArrayQuestions.getElement103( input, -1 );
-            throw new Exception( "Test failed: Should throw an exception." );
+            throw new IncorrectAnswer( "Test failed: Should throw an exception." );
         }
-        catch( Exception e ) {
+ catch (ArrayIndexOutOfBoundsException e) {
             // Success.
         }
         try {
             CS1.ArrayQuestions.getElement103( input, 6 );
-            throw new Exception( "Test failed: Should throw an exception." );
+            throw new IncorrectAnswer( "Test failed: Should throw an exception." );
         }
-        catch( Exception e ) {
+ catch (ArrayIndexOutOfBoundsException e) {
             // Success.
         }
     }
     
-    static public void test_changeArray101() throws Exception {
+    static public void test_changeArray101() throws IncorrectAnswer {
         {
             int[] input = { 1, 2 };
             int[] expected = { 2 };
             int[] actual = CS1.ArrayQuestions.changeArray101( input );
             
             if ( expected.length != actual.length ) {
-                throw new Exception( "Test failed: array have wrong length." );
+                throw new IncorrectAnswer( "Test failed: array have wrong length." );
             }
             for ( int i = 0; i < actual.length; ++i ) {
                 if ( expected[i] != actual[i] ) {
-                    throw new Exception( "Test failed: the " + i + 
+                    throw new IncorrectAnswer( "Test failed: the " + i + 
                             " element should be " + actual[i] + " but was " + 
                                     expected[i] + "." );
                 }
@@ -204,29 +212,29 @@ public class GradeArrayQuestions {
             int[] actual = CS1.ArrayQuestions.changeArray101( input );
             
             if ( expected.length != actual.length ) {
-                throw new Exception( "Test failed: array have wrong length." );
+                throw new IncorrectAnswer( "Test failed: array have wrong length." );
             }
             for ( int i = 0; i < actual.length; ++i ) {
                 if ( expected[i] != actual[i] ) {
-                    throw new Exception( "Test failed: the " + i + 
+                    throw new IncorrectAnswer( "Test failed: the " + i + 
                             " element should be " + actual[i] + " but was " + 
                                     expected[i] + "." );
                 }
             }
         }
     }
-    static public void test_changeArray102() throws Exception {
+    static public void test_changeArray102() throws IncorrectAnswer {
         {
             int[] input = { 1 };
             int[] expected = { 1 };
             int[] actual = CS1.ArrayQuestions.changeArray102( input );
             
             if ( expected.length != actual.length ) {
-                throw new Exception( "Test failed: array have wrong length." );
+                throw new IncorrectAnswer( "Test failed: array have wrong length." );
             }
             for ( int i = 0; i < actual.length; ++i ) {
                 if ( expected[i] != actual[i] ) {
-                    throw new Exception( "Test failed: the " + i + 
+                    throw new IncorrectAnswer( "Test failed: the " + i + 
                             " element should be " + actual[i] + " but was " + 
                                     expected[i] + "." );
                 }
@@ -238,11 +246,11 @@ public class GradeArrayQuestions {
             int[] actual = CS1.ArrayQuestions.changeArray102( input );
             
             if ( expected.length != actual.length ) {
-                throw new Exception( "Test failed: array have wrong length." );
+                throw new IncorrectAnswer( "Test failed: array have wrong length." );
             }
             for ( int i = 0; i < actual.length; ++i ) {
                 if ( expected[i] != actual[i] ) {
-                    throw new Exception( "Test failed: the " + i + 
+                    throw new IncorrectAnswer( "Test failed: the " + i + 
                             " element should be " + actual[i] + " but was " + 
                                     expected[i] + "." );
                 }
@@ -254,18 +262,18 @@ public class GradeArrayQuestions {
             int[] actual = CS1.ArrayQuestions.changeArray102( input );
             
             if ( expected.length != actual.length ) {
-                throw new Exception( "Test failed: array have wrong length." );
+                throw new IncorrectAnswer( "Test failed: array have wrong length." );
             }
             for ( int i = 0; i < actual.length; ++i ) {
                 if ( expected[i] != actual[i] ) {
-                    throw new Exception( "Test failed: the " + i + 
+                    throw new IncorrectAnswer( "Test failed: the " + i + 
                             " element should be " + actual[i] + " but was " + 
                                     expected[i] + "." );
                 }
             }
         }        
     }
-    static public void test_combineArrays() throws Exception {
+    static public void test_combineArrays() throws IncorrectAnswer {
         {
             int[] input1 = { 5, 6, 13 },
                   input2 = { 7, 8, 20 },
@@ -273,11 +281,11 @@ public class GradeArrayQuestions {
                   actual = CS1.ArrayQuestions.combineArrays( input1, input2 );
         
             if ( expected.length != actual.length ) {
-                throw new Exception( "Test failed: array have wrong length." );
+                throw new IncorrectAnswer( "Test failed: array have wrong length." );
             }
             for ( int i = 0; i < actual.length; ++i ) {
                 if ( expected[i] != actual[i] ) {
-                    throw new Exception( "Test failed: the " + i + 
+                    throw new IncorrectAnswer( "Test failed: the " + i + 
                             " element should be " + expected[i] + " but was " + 
                                     actual[i] + "." );
                 }
@@ -290,18 +298,18 @@ public class GradeArrayQuestions {
                   actual = CS1.ArrayQuestions.combineArrays( input1, input2 );
         
             if ( expected.length != actual.length ) {
-                throw new Exception( "Test failed: array have wrong length." );
+                throw new IncorrectAnswer( "Test failed: array have wrong length." );
             }
             for ( int i = 0; i < actual.length; ++i ) {
                 if ( expected[i] != actual[i] ) {
-                    throw new Exception( "Test failed: the " + i + 
+                    throw new IncorrectAnswer( "Test failed: the " + i + 
                             " element should be " + expected[i] + " but was " + 
                                     actual[i] + "." );
                 }
             }
         }
     }
-    static public void test_incrementArrays() throws Exception {
+    static public void test_incrementArrays() throws IncorrectAnswer {
         {
             int[] input1 = { 5 },
                   expected = { 10 },
@@ -310,7 +318,7 @@ public class GradeArrayQuestions {
         
             for ( int i = 0; i < actual.length; ++i ) {
                 if ( expected[i] != actual[i] ) {
-                    throw new Exception( "Test failed: the " + i + 
+                    throw new IncorrectAnswer( "Test failed: the " + i + 
                             " element should be " + expected[i] + " but was " + 
                                     actual[i] + "." );
                 }
@@ -324,21 +332,21 @@ public class GradeArrayQuestions {
         
             for ( int i = 0; i < actual.length; ++i ) {
                 if ( expected[i] != actual[i] ) {
-                    throw new Exception( "Test failed: the " + i + 
+                    throw new IncorrectAnswer( "Test failed: the " + i + 
                             " element should be " + expected[i] + " but was " + 
                                     actual[i] + "." );
                 }
             }
         }
     }
-    static public void test_sumArray() throws Exception {
+    static public void test_sumArray() throws IncorrectAnswer {
         {
             int[] input1 = { 5 };
             int expected = 5,
                 actual = CS1.ArrayQuestions.sumArray( input1 );
         
             if ( expected != actual ) {
-                throw new Exception( String.format(
+                throw new IncorrectAnswer( String.format(
                     "Test failed: for the array %s the result should be %d but"
                     +
                     " was %d.", 
@@ -351,7 +359,7 @@ public class GradeArrayQuestions {
                 actual = CS1.ArrayQuestions.sumArray( input1 );
         
             if ( expected != actual ) {
-                throw new Exception( String.format(
+                throw new IncorrectAnswer( String.format(
                     "Test failed: for the array %s the result should be %d but"
                     +
                     " was %d.", 
@@ -359,14 +367,14 @@ public class GradeArrayQuestions {
             }
         }
     }
-    static public void test_getArrayMax() throws Exception {
+    static public void test_getArrayMax() throws IncorrectAnswer {
         {
             int[] input1 = { 5 };
             int expected = 5,
                 actual = CS1.ArrayQuestions.getArrayMax( input1 );
         
             if ( expected != actual ) {
-                throw new Exception( String.format(
+                throw new IncorrectAnswer( String.format(
                     "Test failed: for the array %s the result should be %d but"
                     +
                     " was %d.", 
@@ -379,7 +387,7 @@ public class GradeArrayQuestions {
                 actual = CS1.ArrayQuestions.getArrayMax( input1 );
         
             if ( expected != actual ) {
-                throw new Exception( String.format(
+                throw new IncorrectAnswer( String.format(
                     "Test failed: for the array %s the result should be %d but"
                     +
                     " was %d.", 
@@ -392,7 +400,7 @@ public class GradeArrayQuestions {
                 actual = CS1.ArrayQuestions.getArrayMax( input1 );
         
             if ( expected != actual ) {
-                throw new Exception( String.format(
+                throw new IncorrectAnswer( String.format(
                     "Test failed: for the array %s the result should be %d but"
                     +
                     " was %d.", 
@@ -400,14 +408,14 @@ public class GradeArrayQuestions {
             }
         }
     }
-    static public void test_getArrayMin() throws Exception {
+    static public void test_getArrayMin() throws IncorrectAnswer {
         {
             int[] input1 = { 5 };
             int expected = 5,
                 actual = CS1.ArrayQuestions.getArrayMin( input1 );
         
             if ( expected != actual ) {
-                throw new Exception( String.format(
+                throw new IncorrectAnswer( String.format(
                     "Test failed: for the array %s the result should be %d but"
                     +
                     " was %d.", 
@@ -420,7 +428,7 @@ public class GradeArrayQuestions {
                 actual = CS1.ArrayQuestions.getArrayMin( input1 );
         
             if ( expected != actual ) {
-                throw new Exception( String.format(
+                throw new IncorrectAnswer( String.format(
                     "Test failed: for the array %s the result should be %d but"
                     +
                     " was %d.", 
@@ -433,7 +441,7 @@ public class GradeArrayQuestions {
                 actual = CS1.ArrayQuestions.getArrayMin( input1 );
         
             if ( expected != actual ) {
-                throw new Exception( String.format(
+                throw new IncorrectAnswer( String.format(
                     "Test failed: for the array %s the result should be %d but"
                     +
                     " was %d.", 

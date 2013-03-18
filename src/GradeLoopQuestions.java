@@ -8,13 +8,15 @@
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import framework.Grader;
+import framework.Grader.IncorrectAnswer;
 
 /**
  *
- * @author jgillham
+ * @author Josh Gillham
+ * @version 3-18-13
  */
-public class GradeLoopQuestions {
-    static public int possiblePoints = 0;
+public class GradeLoopQuestions extends Grader {
     static public void main( String[] args ) {
         int score = grade();
         System.out.printf( "You got %d out of %d.\n", score, possiblePoints );
@@ -34,7 +36,7 @@ public class GradeLoopQuestions {
         return result;
     }
         
-    static public void test_outputCount101() throws Exception {
+    static public void test_outputCount101() throws IncorrectAnswer {
         PrintStream sysDefault = System.out;
         try {
             {
@@ -42,11 +44,11 @@ public class GradeLoopQuestions {
                 System.setOut( new PrintStream( result ) );
                 
                 CS1.LoopQuestions.outputCount101( 1 );
-                String actual = result.toString("UTF8");
+                String actual = result.toString();
 
                 if ( !actual.equals( "1\r\n" ) &&
                         !actual.equals( "1\n" ) ) {
-                    throw new Exception( "Bad answer: for n = 1 yours was \"" + 
+                    throw new IncorrectAnswer( "Bad answer: for n = 1 yours was \"" + 
                         actual + "\"" );
                 }
             }
@@ -55,11 +57,11 @@ public class GradeLoopQuestions {
                 System.setOut( new PrintStream( result ) );
                 
                 CS1.LoopQuestions.outputCount101( 5 );
-                String actual = result.toString("UTF8");
+                String actual = result.toString();
 
                 if ( !actual.equals( "1\r\n2\r\n3\r\n4\r\n5\r\n" ) &&
                         !actual.equals( "1\n2\n3\n4\n5\n" ) ) {
-                    throw new Exception( "Bad answer: for n = 5 yours was \"" + 
+                    throw new IncorrectAnswer( "Bad answer: for n = 5 yours was \"" + 
                         actual + "\"" );
                 }
             }
@@ -68,11 +70,11 @@ public class GradeLoopQuestions {
                 System.setOut( new PrintStream( result ) );
                 
                 CS1.LoopQuestions.outputCount101( 7 );
-                String actual = result.toString("UTF8");
+                String actual = result.toString();
 
                 if ( !actual.equals( "1\r\n2\r\n3\r\n4\r\n5\r\n6\r\n7\r\n" ) &&
                         !actual.equals( "1\n2\n3\n4\n5\n6\n7\n" ) ) {
-                    throw new Exception( "Bad answer: for n = 7 yours was \"" + 
+                    throw new IncorrectAnswer( "Bad answer: for n = 7 yours was \"" + 
                         actual + "\"" );
                 }
             }
