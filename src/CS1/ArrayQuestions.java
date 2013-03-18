@@ -138,7 +138,7 @@ public class ArrayQuestions extends framework.Quiz {
      * 
      * @return the maximum value of an array.
      */
-    public static int[] getArrayMax( int[] array ) {
+    public static int getArrayMax( int[] array ) {
         //TODO delete the line below and write your solution.
         throw new UnsupportedOperationException();
     }
@@ -152,7 +152,7 @@ public class ArrayQuestions extends framework.Quiz {
      * 
      * @return the minimum value of an array.
      */
-    public static int[] getArrayMin( int[] array ) {
+    public static int getArrayMin( int[] array ) {
         //TODO delete the line below and write your solution.
         throw new UnsupportedOperationException();
     }
