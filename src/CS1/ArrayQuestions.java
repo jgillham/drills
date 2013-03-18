@@ -108,11 +108,9 @@ public class ArrayQuestions extends framework.Quiz {
      *  array. For example, if n = 3 and the array is { 2, 1, 5, 7 } then the 
      *  result will be { 5, 4, 8, 10 }.
      * 
-     * @param array is the array to look through.
-     * 
-     * @return the new modified array.
+     * @param array the array to modify.
      */
-    public static int[] incrementArray( int[] array, int n ) {
+    public static void incrementArray( int[] array, int n ) {
         //TODO delete the line below and write your solution.
         throw new UnsupportedOperationException();
     }
