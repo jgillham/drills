@@ -79,6 +79,15 @@ public class GradeArrayQuestions {
         }
         try {
             ++possiblePoints;
+            test_sumArray();
+            ++result;
+            System.out.println( "test_sumArray successful!" );
+        }
+        catch ( Exception e ) {
+            e.printStackTrace();
+        }
+        try {
+            ++possiblePoints;
             test_getArrayMax();
             ++result;
             System.out.println( "test_getArrayMax successful!" );
@@ -319,6 +328,34 @@ public class GradeArrayQuestions {
                             " element should be " + expected[i] + " but was " + 
                                     actual[i] + "." );
                 }
+            }
+        }
+    }
+    static public void test_sumArray() throws Exception {
+        {
+            int[] input1 = { 5 };
+            int expected = 5,
+                actual = CS1.ArrayQuestions.sumArray( input1 );
+        
+            if ( expected != actual ) {
+                throw new Exception( String.format(
+                    "Test failed: for the array %s the result should be %d but"
+                    +
+                    " was %d.", 
+                    Arrays.toString( input1 ), expected, actual ) );
+            }
+        }
+        {
+            int[] input1 = { 5, 7, 2, 10, 3, 4 };
+            int expected = 31,
+                actual = CS1.ArrayQuestions.sumArray( input1 );
+        
+            if ( expected != actual ) {
+                throw new Exception( String.format(
+                    "Test failed: for the array %s the result should be %d but"
+                    +
+                    " was %d.", 
+                    Arrays.toString( input1 ), expected, actual ) );
             }
         }
     }
