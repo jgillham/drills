@@ -11,8 +11,6 @@ package CS1;
  * @author domingo flores
  */
 public class ArrayQuestions extends framework.Quiz {
-    public static class UnansweredQuestionException 
-            extends UnsupportedOperationException {}
     
     /**
      * Question #A.1)
@@ -100,8 +98,15 @@ public class ArrayQuestions extends framework.Quiz {
      * @return the new combination of arrays.
      */
     public static int[] combineArrays( int[] array1, int[] array2 ) {
-        //TODO delete the line below and write your solution.
-        throw new UnsupportedOperationException();
+        int[] result = new int[ array1.length + array2.length ];
+        for ( int i = 0; i < array1.length; ++i ) {
+            result[i] = array1[i];
+        }
+        int base = array1.length;
+        for ( int i = 0; i < array2.length; ++i, ++base ) {
+            result[base] = array2[i];
+        }
+        return result;
     }
     
     /**
@@ -113,8 +118,9 @@ public class ArrayQuestions extends framework.Quiz {
      * @param array the array to modify.
      */
     public static void incrementArray( int[] array, int n ) {
-        //TODO delete the line below and write your solution.
-        throw new UnsupportedOperationException();
+        for ( int i = 0; i < array.length; ++i ) {
+            array[i] += n;
+        }
     }
     
     /**
@@ -127,8 +133,11 @@ public class ArrayQuestions extends framework.Quiz {
      * @return the sum of the array.
      */
     public static int sumArray( int[] array ) {
-        //TODO delete the line below and write your solution.
-        throw new UnsupportedOperationException();
+        int sum = 0;
+        for ( int i = 0; i < array.length; ++i ) {
+            sum += array[i];
+        }
+        return sum;
     }
     
     /**
@@ -141,8 +150,12 @@ public class ArrayQuestions extends framework.Quiz {
      * @return the maximum value of an array.
      */
     public static int getArrayMax( int[] array ) {
-        //TODO delete the line below and write your solution.
-        throw new UnsupportedOperationException();
+        int max = array[0];
+        for ( int i = 1; i < array.length; ++i ) {
+            if ( max < array[i] )
+                max = array[i];
+        }
+        return max;
     }
     
     /**
@@ -155,7 +168,11 @@ public class ArrayQuestions extends framework.Quiz {
      * @return the minimum value of an array.
      */
     public static int getArrayMin( int[] array ) {
-        //TODO delete the line below and write your solution.
-        throw new UnsupportedOperationException();
+        int min = array[0];
+        for ( int i = 1; i < array.length; ++i ) {
+            if ( min > array[i] )
+                min = array[i];
+        }
+        return min;
     }
 }
