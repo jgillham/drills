@@ -39,46 +39,33 @@ public class GradeLoopQuestions extends Grader {
     static public void test_outputCount101() throws IncorrectAnswer {
         PrintStream sysDefault = System.out;
         try {
+            int[] inputs = { 0, 1, 5, 7 };
+            for ( int input : inputs )
             {
                 ByteArrayOutputStream result = new ByteArrayOutputStream();
                 System.setOut( new PrintStream( result ) );
                 
-                CS1.LoopQuestions.outputCount101( 1 );
+                CS1.LoopQuestions.outputCount101( input );
                 String actual = result.toString();
+                StringBuilder expectedWin = new StringBuilder();
+                StringBuilder expectedLinux = new StringBuilder();
+                for ( int i = 1; i <= input; ++i ) {
+                    expectedWin.append( i );
+                    expectedLinux.append( i );
+                    expectedWin.append( "\r\n" );
+                    expectedLinux.append( '\n' );
+                }
 
-                if ( !actual.equals( "1\r\n" ) &&
-                        !actual.equals( "1\n" ) ) {
-                    throw new IncorrectAnswer( "Bad answer: for n = 1 yours was \"" + 
-                        actual + "\"" );
+                if ( !actual.equals( expectedWin.toString() ) &&
+                !actual.equals( expectedLinux.toString() ) ) {
+                    throw new IncorrectAnswer( String.format( 
+                        "Bad answer: for n = %d, the answer should be \"%s\""
+                        +
+                        " but was \"%s\".",
+                        input, expectedLinux.toString(),
+                        actual ) );
                 }
             }
-            {
-                ByteArrayOutputStream result = new ByteArrayOutputStream();
-                System.setOut( new PrintStream( result ) );
-                
-                CS1.LoopQuestions.outputCount101( 5 );
-                String actual = result.toString();
-
-                if ( !actual.equals( "1\r\n2\r\n3\r\n4\r\n5\r\n" ) &&
-                        !actual.equals( "1\n2\n3\n4\n5\n" ) ) {
-                    throw new IncorrectAnswer( "Bad answer: for n = 5 yours was \"" + 
-                        actual + "\"" );
-                }
-            }
-            {
-                ByteArrayOutputStream result = new ByteArrayOutputStream();
-                System.setOut( new PrintStream( result ) );
-                
-                CS1.LoopQuestions.outputCount101( 7 );
-                String actual = result.toString();
-
-                if ( !actual.equals( "1\r\n2\r\n3\r\n4\r\n5\r\n6\r\n7\r\n" ) &&
-                        !actual.equals( "1\n2\n3\n4\n5\n6\n7\n" ) ) {
-                    throw new IncorrectAnswer( "Bad answer: for n = 7 yours was \"" + 
-                        actual + "\"" );
-                }
-            }
-            
         }
         finally {
             System.setOut( sysDefault );
