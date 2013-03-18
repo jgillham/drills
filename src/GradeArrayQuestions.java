@@ -1,4 +1,4 @@
-
+import java.util.Arrays;
 
 /**
  *
@@ -55,6 +55,42 @@ public class GradeArrayQuestions {
             test_changeArray102();
             ++result;
             System.out.println( "test_changeArray102 successful!" );
+        }
+        catch ( Exception e ) {
+            e.printStackTrace();
+        }
+        try {
+            ++possiblePoints;
+            test_combineArrays();
+            ++result;
+            System.out.println( "test_combineArrays successful!" );
+        }
+        catch ( Exception e ) {
+            e.printStackTrace();
+        }
+        try {
+            ++possiblePoints;
+            test_incrementArrays();
+            ++result;
+            System.out.println( "test_combineArrays successful!" );
+        }
+        catch ( Exception e ) {
+            e.printStackTrace();
+        }
+        try {
+            ++possiblePoints;
+            test_getArrayMax();
+            ++result;
+            System.out.println( "test_getArrayMax successful!" );
+        }
+        catch ( Exception e ) {
+            e.printStackTrace();
+        }
+        try {
+            ++possiblePoints;
+            test_getArrayMin();
+            ++result;
+            System.out.println( "test_getArrayMin successful!" );
         }
         catch ( Exception e ) {
             e.printStackTrace();
@@ -219,5 +255,127 @@ public class GradeArrayQuestions {
                 }
             }
         }        
+    }
+    static public void test_combineArrays() throws Exception {
+        {
+            int[] input1 = { 5, 6, 13 },
+                  input2 = { 7, 8, 20 },
+                  expected = { 5, 6, 13, 7, 8, 20 },
+                  actual = CS1.ArrayQuestions.combineArrays( input1, input2 );
+        
+            if ( expected.length != actual.length ) {
+                throw new Exception( "Test failed: array have wrong length." );
+            }
+            for ( int i = 0; i < actual.length; ++i ) {
+                if ( expected[i] != actual[i] ) {
+                    throw new Exception( "Test failed: the " + i + 
+                            " element should be " + expected[i] + " but was " + 
+                                    actual[i] + "." );
+                }
+            }
+        }
+        {
+            int[] input1 = { 5 },
+                  input2 = { 7, 8, 20 },
+                  expected = { 5, 7, 8, 20 },
+                  actual = CS1.ArrayQuestions.combineArrays( input1, input2 );
+        
+            if ( expected.length != actual.length ) {
+                throw new Exception( "Test failed: array have wrong length." );
+            }
+            for ( int i = 0; i < actual.length; ++i ) {
+                if ( expected[i] != actual[i] ) {
+                    throw new Exception( "Test failed: the " + i + 
+                            " element should be " + expected[i] + " but was " + 
+                                    actual[i] + "." );
+                }
+            }
+        }
+    }
+    static public void test_incrementArrays() throws Exception {
+        {
+            int[] input1 = { 5 },
+                  expected = { 10 },
+                  actual = input1;
+            CS1.ArrayQuestions.incrementArray( input1, 5 );
+        
+            for ( int i = 0; i < actual.length; ++i ) {
+                if ( expected[i] != actual[i] ) {
+                    throw new Exception( "Test failed: the " + i + 
+                            " element should be " + expected[i] + " but was " + 
+                                    actual[i] + "." );
+                }
+            }
+        }
+        {
+            int[] input1 = { 5, 6, 13 },
+                  expected = { 7, 8, 15 },
+                  actual = input1;
+            CS1.ArrayQuestions.incrementArray( input1, 2 );
+        
+            for ( int i = 0; i < actual.length; ++i ) {
+                if ( expected[i] != actual[i] ) {
+                    throw new Exception( "Test failed: the " + i + 
+                            " element should be " + expected[i] + " but was " + 
+                                    actual[i] + "." );
+                }
+            }
+        }
+    }
+    static public void test_getArrayMax() throws Exception {
+        {
+            int[] input1 = { 5 };
+            int expected = 5,
+                actual = CS1.ArrayQuestions.getArrayMax( input1 );
+        
+            if ( expected != actual ) {
+                throw new Exception( String.format(
+                    "Test failed: for the array %s the result should be %d but"
+                    +
+                    " was %d.", 
+                    Arrays.toString( input1 ), expected, actual ) );
+            }
+        }
+        {
+            int[] input1 = { 5, 7, 3, 10, 2, 1 };
+            int expected = 10,
+                actual = CS1.ArrayQuestions.getArrayMax( input1 );
+        
+            if ( expected != actual ) {
+                throw new Exception( String.format(
+                    "Test failed: for the array %s the result should be %d but"
+                    +
+                    " was %d.", 
+                    Arrays.toString( input1 ), expected, actual ) );
+            }
+        }
+    }
+    static public void test_getArrayMin() throws Exception {
+        {
+            int[] input1 = { 5 };
+            int expected = 5,
+                actual = CS1.ArrayQuestions.getArrayMin( input1 );
+        
+            if ( expected != actual ) {
+                throw new Exception( String.format(
+                    "Test failed: for the array %s the result should be %d but"
+                    +
+                    " was %d.", 
+                    Arrays.toString( input1 ), expected, actual ) );
+            }
+        }
+        {
+            int[] input1 = { 5, 7, 2, 10, 3, 4 };
+            int expected = 2,
+                actual = CS1.ArrayQuestions.getArrayMin( input1 );
+        
+            if ( expected != actual ) {
+                throw new Exception( String.format(
+                    "Test failed: for the array %s the result should be %d but"
+                    +
+                    " was %d.", 
+                    Arrays.toString( input1 ), expected, actual ) );
+            }
+        }
     }
 }
