@@ -74,7 +74,7 @@ public class GradeArrayQuestions extends Grader {
             ++possiblePoints;
             test_incrementArrays();
             ++result;
-            System.out.println( "test_combineArrays successful!" );
+            System.out.println( "test_incrementArrays successful!" );
         }
         catch (Exception e) {
             e.printStackTrace();
