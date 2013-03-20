@@ -16,6 +16,8 @@ public class GradeAll {
         int possiblePoints = GradeArrayQuestions.possiblePoints;
         score += GradeLoopQuestions.grade();
         possiblePoints += GradeLoopQuestions.possiblePoints;
+        score += GradeHeapQuestions.grade();
+        possiblePoints += GradeHeapQuestions.possiblePoints;
         System.out.printf( "You got %d out of %d.\n", score, possiblePoints );
     }    
 }
